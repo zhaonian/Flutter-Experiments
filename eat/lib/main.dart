@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
               body2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)))),
       home: CategoriesScreen(),
       routes: {
-        '/categories-meals': (ctx) => CategoryMealsScreen()
+        '/': (ctx) => CategoriesScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen()
       },
     );
   }
