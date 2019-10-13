@@ -1,4 +1,5 @@
 import 'package:eat/screens/category_meals_screen.dart';
+import 'package:eat/screens/filters_screen.dart';
 import 'package:eat/screens/meal_detail_screen.dart';
 import 'package:eat/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
@@ -23,10 +24,13 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold),
               body1: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
               body2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)))),
-      home: TabsScreen(),
+//      home: TabsScreen(),
+      initialRoute: '/',
       routes: {
+        '/': (ctx) => TabsScreen(),
         CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx) => MealDetailScreen()
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
 //      onGenerateRoute: (settings) {
 //        print(settings.arguments); return MaterialPageRoute(builder: (ctx) => CategoriesScreen(), )
